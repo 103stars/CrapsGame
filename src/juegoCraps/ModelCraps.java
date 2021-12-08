@@ -11,8 +11,8 @@ package juegoCraps;
  * @version v.1.0.0 date 7/12/2021
  */
 public class ModelCraps {
-    private Dado dado1,dado2;
 
+    private Dado dado1,dado2;
     private int tiro, punto, estado, flag;
     private String estadoToString;
     private int[] caras;
@@ -35,7 +35,8 @@ public class ModelCraps {
     public void  calcularTiro(){
         caras[0]=dado1.getCara();
         caras[1]=dado2.getCara();
-        tiro = caras[0]+caras[1];
+        tiro = caras[0] + caras[1];
+
     }
 
     /**
@@ -46,6 +47,7 @@ public class ModelCraps {
      * estado = 4 Punto winner
      * estado = 5 Punto loser
      */
+
     public void determinarJuego(){
         if(flag==0){
             if(tiro==7 || tiro==11){
@@ -56,6 +58,7 @@ public class ModelCraps {
                 }else{
                     estado=3;
                     punto=tiro;
+                    flag=1;
                 }
             }
         }else{
@@ -70,7 +73,7 @@ public class ModelCraps {
     private void rondaPunto() {
         if(tiro==punto){
             estado=4;
-            flag=1;
+            flag=0;
         }
         if(tiro==7){
             estado=5;
@@ -90,21 +93,21 @@ public class ModelCraps {
         switch(estado){
 
             case 1: estadoToString="Sacaste natural, has ganado!";
-            break;
+                break;
 
             case 2: estadoToString="Sacaste craps, has perdido!";
-            break;
+                break;
 
             case 3: estadoToString="Estableciste punto en" +punto+
                                     " Debes seguir lanzando!"+
             "\n pero si sacas 7 antes que "+punto+" perderás";
-            break;
+                break;
 
             case 4: estadoToString="Volviste a sacar "+punto+" has ganado!";
-            break;
+                break;
 
             case 5: estadoToString="Sacaste 7 antes que "+punto+" has perdido!";
-            break;
+                break;
 
         }
         return estadoToString;
