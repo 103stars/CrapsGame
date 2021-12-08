@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Class dando generates a random number between 1 to 6
  * @author ALEJANDRO LASSO MEDINA
- * @version v.1.0.0 7/12/2021
+ * @version v.1.0.0 date 7/12/2021
  */
 
 public class Dado {
