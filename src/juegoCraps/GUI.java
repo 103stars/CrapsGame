@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class GUI extends JFrame{
 
-    private static final String MENSAJE_INICIO = "Bienvenido a Craps \n"
+    public static final String MENSAJE_INICIO = "Bienvenido a Craps \n"
             + "Oprime el botón lanzar para iniciar el juego"
             + "\nSi tu tiro de salida es 7 u 11 ganas con Natural"
             + "\nSi tu tiro de salida es 2, 3 o 12 pierdes con Craps"
@@ -29,7 +29,6 @@ public class GUI extends JFrame{
     public GUI(){
         initGUI();
         this.setTitle("Juego Craps");
-        //this.setSize(600, 520);
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
@@ -48,6 +47,7 @@ public class GUI extends JFrame{
 
         headerProject = new Header("Header ", Color.BLACK);
         this.add(headerProject, BorderLayout.NORTH);
+
         imageDado = new ImageIcon(getClass().getResource("/resources/dado.png"));
         dado1 = new JLabel(imageDado);
         dado2 = new JLabel(imageDado);
@@ -72,6 +72,7 @@ public class GUI extends JFrame{
         panelResultados= new JPanel();
         panelResultados.setBorder(BorderFactory.createTitledBorder("Que debes hacer"));
         panelResultados.add(scroll);
+
         panelResultados.setPreferredSize(new Dimension(370, 180));
 
         this.add(panelResultados,BorderLayout.EAST);
@@ -80,6 +81,7 @@ public class GUI extends JFrame{
         separator= new JSeparator();
         separator.setPreferredSize(new Dimension(320, 7));
         separator.setBackground(Color.BLUE);
+
 
 
 

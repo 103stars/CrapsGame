@@ -110,8 +110,8 @@ public class ModelCraps {
             case 3: estadoToString[0]="Tiro de salida = "+tiro+ "\n Punto = "+punto;
 
                 estadoToString[1]="Estableciste punto en " +punto+
-                                    " Debes seguir lanzando!"+
-            "\n pero si sacas 7 antes que "+punto+" perderás";
+                                    " debes seguir lanzando!"+
+            "\npero si sacas 7 antes que "+punto+" perderás";
                 break;
 
             case 4:
@@ -125,8 +125,8 @@ public class ModelCraps {
                 break;
 
             case 6:
-                estadoToString[0]="Tiro de salida = "+punto+ "\n Punto = "+punto+"\n valor del nuevo tiro = "+tiro;
-                estadoToString[1]="\n Estas en punto y debes seguir lanzando!"+
+                estadoToString[0]="Tiro de salida = "+punto+ "\n Punto = "+punto+"\n Valor del nuevo tiro = "+tiro;
+                estadoToString[1]="Estas en punto y debes seguir lanzando!"+
                 "\npero si sacas 7 antes que "+punto+" perderás";
                 break;
 
